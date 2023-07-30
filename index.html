@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+</head>
+
+<body>
+    <div>
+        <h1>TODO LIST</h1>
+        <br><br>
+        <form action="">
+            <div>
+                <input type="text" name="" id="Input">
+                <input type="button" value="add" onclick="addItems()">
+            </div>
+            <br>
+            <div>
+                <ol class="list">
+                </ol>
+
+            </div>
+        </form>
+    </div>
+    <script>
+        function addItems() {
+
+            var input = document.querySelector("#Input");
+            var list = document.querySelector(".list");
+            if (input.value != "") {
+                var make_li = document.createElement("li");
+                make_li.appendChild(document.createTextNode(Input.value));
+                list.appendChild(make_li);
+              input.value=" ";
+            
+            make_li.onclick = function (){
+                this.parentNode.removeChild(this);
+            }
+        }else{
+                alert("Please Enter a Todo Item");
+            }
+
+    }
+
+
+    </script>
+</body>
+
+</html>
